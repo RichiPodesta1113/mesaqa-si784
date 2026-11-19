@@ -39,5 +39,4 @@ GitHub Actions ejecuta las pruebas con cobertura, Bandit y pip-audit. Los inform
 - [Auditoría de dependencias con pip-audit](articulos/02-auditoria-dependencias.md)
 - [Pruebas de API con unittest](articulos/03-api-testing.md)
 - [Guiones de video](articulos/guiones.md)
-- [Formularios de proyecto FD01–FD04](proyecto/)
 - [Registro de enlaces](entrega.md)
