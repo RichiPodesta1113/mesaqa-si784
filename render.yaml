@@ -2,6 +2,7 @@ services:
   - type: web
     name: mesaqa
     runtime: docker
+    plan: free
     autoDeployTrigger: checksPass
     healthCheckPath: /health
     envVars:

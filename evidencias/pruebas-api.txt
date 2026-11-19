@@ -1,0 +1,16 @@
+test_close_is_idempotent_and_persistent (test_api.TicketsTest.test_close_is_idempotent_and_persistent) ... ok
+test_create_and_read (test_api.TicketsTest.test_create_and_read) ... ok
+test_health_and_headers (test_api.TicketsTest.test_health_and_headers) ... ok
+test_index_discovery (test_api.TicketsTest.test_index_discovery) ... ok
+test_invalid_media_type_and_json (test_api.TicketsTest.test_invalid_media_type_and_json) ... ok
+test_invalid_payload_does_not_write (test_api.TicketsTest.test_invalid_payload_does_not_write) ... ok
+test_large_body_is_rejected (test_api.TicketsTest.test_large_body_is_rejected) ... ok
+test_list_is_newest_first (test_api.TicketsTest.test_list_is_newest_first) ... ok
+test_missing_ticket_returns_404 (test_api.TicketsTest.test_missing_ticket_returns_404) ... ok
+test_invalid_title_leaves_collection_unchanged (test_http.HttpContract.test_invalid_title_leaves_collection_unchanged) ... ok
+test_ticket_lifecycle_over_http (test_http.HttpContract.test_ticket_lifecycle_over_http) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.498s
+
+OK
