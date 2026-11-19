@@ -1,0 +1,30 @@
+name: Calidad de MesaQA
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install -r requirements.txt
+          pip install bandit pip-audit coverage
+          mkdir -p evidencias
+      - run: |
+          coverage run --source=qa -m unittest discover -s tests -v
+          coverage report --fail-under=95
+          coverage xml -o evidencias/coverage.xml
+      - run: bandit -r qa -f json -o evidencias/bandit.json
+      - run: pip-audit -r requirements.txt --format json --output evidencias/dependencias.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pruebas-y-seguridad
+          path: evidencias

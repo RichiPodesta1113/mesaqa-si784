@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mesaqa
+    runtime: docker
+    autoDeployTrigger: checksPass
+    healthCheckPath: /health
+    envVars:
+      - key: QA_DB
+        value: /app/data/tickets.sqlite3
